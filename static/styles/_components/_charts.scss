@@ -176,3 +176,22 @@ $chart-bottom: 30px;
     background: rgba(#fff, 1);
   }
 }
+
+// For charts in tables
+.chart-series--horizontal.table--simple {
+  .chart-series__bar__label {
+    @include span-columns(6, block-collapse);
+  }
+
+  .chart-series__bar__value {
+    @include span-columns(2, block-collapse);
+  }
+
+  .chart-series__bar {
+    margin-bottom: 0;
+  }
+
+  .table__cell--bar {
+    @include span-columns(16, block-collapse);
+  }
+}

@@ -100,16 +100,13 @@ td {
   border-bottom: 1px solid $light-gray;
 }
 
-.table__header {
-}
-
 .table__cell {
   @include rem(padding, 0 1rem);
   float: left;
+}
 
-  &:last-child {
-    float: right;
-  }
+.table__cell--heading {
+  font-weight: bold;
 }
 
 .table__row--note {
@@ -150,6 +147,7 @@ td {
   .table__cell {
     padding: .5em 1em;
     border-right: none;
+    line-height: 1;
   }
 
   th,

@@ -374,8 +374,9 @@ td {
   padding: 0 10px;
   padding: 0 1rem;
   float: left; }
-  .table__cell:last-child {
-    float: right; }
+
+.table__cell--heading {
+  font-weight: bold; }
 
 .table__row--note {
   font-size: 14px;
@@ -406,7 +407,8 @@ td {
   .table--simple td,
   .table--simple .table__cell {
     padding: .5em 1em;
-    border-right: none; }
+    border-right: none;
+    line-height: 1; }
   .table--simple th,
   .table--simple .table__header {
     font-weight: bold;
@@ -1314,7 +1316,7 @@ figure {
     margin-top: 1em; }
 
 .figure__title {
-  border-bottom: 1px solid #b3b3b3; }
+  border-bottom: 2px solid #b3b3b3; }
 
 .finance-table .table__row {
   border-bottom: 1px dashed #b3b3b3;
@@ -2066,6 +2068,27 @@ footer {
   .chart-series__bar:hover .chart-series__bar__tooltip {
     right: 100%;
     background: white; }
+
+.chart-series--horizontal.table--simple .chart-series__bar__label {
+  float: left;
+  display: block;
+  width: 25.29127%; }
+  .chart-series--horizontal.table--simple .chart-series__bar__label:last-child {
+    width: 24.12618%; }
+.chart-series--horizontal.table--simple .chart-series__bar__value {
+  float: left;
+  display: block;
+  width: 8.43042%; }
+  .chart-series--horizontal.table--simple .chart-series__bar__value:last-child {
+    width: 7.26533%; }
+.chart-series--horizontal.table--simple .chart-series__bar {
+  margin-bottom: 0; }
+.chart-series--horizontal.table--simple .table__cell--bar {
+  float: left;
+  display: block;
+  width: 67.44339%; }
+  .chart-series--horizontal.table--simple .table__cell--bar:last-child {
+    width: 66.2783%; }
 
 .styleguide .site-header {
   padding: 2em 0;
