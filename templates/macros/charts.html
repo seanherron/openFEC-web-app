@@ -5,13 +5,13 @@
   <div class="chart-series__bar__tooltip">
     <span class="chart-series__bar__label">{{ key }}</span>
     <span class="chart-series__bar__value">
-      {% if format %}{{ value|format }}{% else %}{{ value }}{% endif %}
+      {% if format == 'currency' %}{{ value|currency }}{% else %}{{ value }}{% endif %}
     </span>
   </div>
 </div>
 {% endmacro %}
 
-{% macro chart_series(bars, value_key, orient='vertical', format=None, attr={}) %}
+{% macro chart_series(bars, value_key, orient='vertical', format='currency', attr={}) %}
 <div class="chart-series chart-series--{{ orient }} {{ attr.class|default('') }}">
   {% for bar in bars %}
     {{ chart_bar(bar[value_key], value_key, format=format, attr={}) }}
@@ -19,7 +19,7 @@
 </div>
 {% endmacro %}
 
-{% macro chart_series_grouped(groups, value_keys, label_key='label', orient='vertical', format=None, attr={}) %}
+{% macro chart_series_grouped(groups, value_keys, label_key='label', orient='vertical', format='currency', attr={}) %}
 <div class="chart-series chart-series--grouped chart-series--{{ orient }} {{ attr.class|default('') }}">
   {% for group in groups %}
   <div class="chart-series__group">
