@@ -26,6 +26,9 @@ $chart-bottom: 30px;
 
 // horizontal bar charts
 .chart-series--horizontal {
+  // text is contained in the bar, so... gray?
+  color: #999;
+
   .chart-series__bar {
     margin-bottom: .25em;
     padding: .5em;

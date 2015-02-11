@@ -1919,15 +1919,17 @@ footer {
   margin: 1em 0;
   overflow: hidden; }
 
-.chart-series--horizontal .chart-series__bar {
-  margin-bottom: .25em;
-  padding: .5em;
-  white-space: nowrap;
-  min-height: 1em; }
-.chart-series--horizontal .chart-series__group {
-  margin-bottom: 2em; }
-.chart-series--horizontal .chart-series__axis {
-  display: none; }
+.chart-series--horizontal {
+  color: #999; }
+  .chart-series--horizontal .chart-series__bar {
+    margin-bottom: .25em;
+    padding: .5em;
+    white-space: nowrap;
+    min-height: 1em; }
+  .chart-series--horizontal .chart-series__group {
+    margin-bottom: 2em; }
+  .chart-series--horizontal .chart-series__axis {
+    display: none; }
 
 .chart-series--vertical {
   display: -webkit-box;
