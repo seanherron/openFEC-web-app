@@ -2,18 +2,46 @@ $chart-bottom: 30px;
 
 .chart-series__bar {
   background: #ccc;
+  overflow: hidden;
 }
 
 .data--disbursement,
-.data--disbursements { background: $data-disbursement; }
+.data--disbursements { 
+  background: $data-disbursement; 
+  .chart-series__bar__tooltip {
+    border-color: $data-disbursement;
+    color: $data-disbursement;
+    background: $data-disbursement;
+  }
+}
 
-.data--receipts { background: $data-receipt; }
+.data--receipts { 
+  background: $data-receipt; 
+  .chart-series__bar__tooltip {
+    border-color: $data-receipt;
+    color: $data-receipt;
+    background: $data-receipt;
+  }
+}
 
 .data--cash,
-.data--cash_on_hand { background: $data-cash; }
+.data--cash_on_hand { 
+  background: $data-cash; 
+  .chart-series__bar__tooltip {
+    border-color: $data-cash;
+    color: $data-cash;
+  }
+
+}
 
 .data--debt,
-.data--debts_owed { background: $data-debt; }
+.data--debts_owed { 
+  background: $data-debt; 
+  .chart-series__bar__tooltip {
+    border-color: $data-debt;
+    color: $data-debt;
+  }
+}
 
 .data--support { background: $data-support; }
 .data--oppose { background: $data-oppose; }
@@ -129,31 +157,22 @@ $chart-bottom: 30px;
 }
 
 .chart-series__bar__tooltip {
-  display: none;
-  width: 120px;
-  margin-left: -60px;
-  background: $licorice;
-  padding: .5em;
+  // @include transition(right .1s ease-in);
+  padding: .75em;
   z-index: 1000;
   position: absolute;
-  bottom: 110%;
-  left: 50%;
-  color: #fff;
-  box-shadow: 0 1px 1px rgba(0,0,0,.2);
-
-  &:after {
-    @include triangle(20px, $licorice, down);
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -10px;
-  }
+  top: 0;
+  right: 0;
+  border: 2px solid;
+  border-right: none;
 }
 
 .chart-series__bar:hover {
+  overflow: visible;
+
   .chart-series__bar__tooltip {
-    display: block;
+    // @include transition(right .1s ease-in);
+    right: 100%;
+    background: rgba(#fff, 1);
   }
 }

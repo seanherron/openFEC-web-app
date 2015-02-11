@@ -1891,22 +1891,40 @@ footer {
   padding: 0 .625em; }
 
 .chart-series__bar {
-  background: #ccc; }
+  background: #ccc;
+  overflow: hidden; }
 
 .data--disbursement,
 .data--disbursements {
   background: #DB4857; }
+  .data--disbursement .chart-series__bar__tooltip,
+  .data--disbursements .chart-series__bar__tooltip {
+    border-color: #DB4857;
+    color: #DB4857;
+    background: #DB4857; }
 
 .data--receipts {
   background: #2678BA; }
+  .data--receipts .chart-series__bar__tooltip {
+    border-color: #2678BA;
+    color: #2678BA;
+    background: #2678BA; }
 
 .data--cash,
 .data--cash_on_hand {
   background: #158552; }
+  .data--cash .chart-series__bar__tooltip,
+  .data--cash_on_hand .chart-series__bar__tooltip {
+    border-color: #158552;
+    color: #158552; }
 
 .data--debt,
 .data--debts_owed {
   background: #323A45; }
+  .data--debt .chart-series__bar__tooltip,
+  .data--debts_owed .chart-series__bar__tooltip {
+    border-color: #323A45;
+    color: #323A45; }
 
 .data--support {
   background: #1B5585; }
@@ -2035,32 +2053,19 @@ footer {
   text-align: center; }
 
 .chart-series__bar__tooltip {
-  display: none;
-  width: 120px;
-  margin-left: -60px;
-  background: #3E4957;
-  padding: .5em;
+  padding: .75em;
   z-index: 1000;
   position: absolute;
-  bottom: 110%;
-  left: 50%;
-  color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
-  .chart-series__bar__tooltip:after {
-    height: 0;
-    width: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #3E4957;
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -10px; }
+  top: 0;
+  right: 0;
+  border: 2px solid;
+  border-right: none; }
 
-.chart-series__bar:hover .chart-series__bar__tooltip {
-  display: block; }
+.chart-series__bar:hover {
+  overflow: visible; }
+  .chart-series__bar:hover .chart-series__bar__tooltip {
+    right: 100%;
+    background: white; }
 
 .styleguide .site-header {
   padding: 2em 0;
