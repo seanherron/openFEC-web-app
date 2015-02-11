@@ -13,35 +13,35 @@
 {% endraw %}</pre>
 
     <figure class="chart-container chart--r-d">
-      <h4 class="figure__title">Simple Bar Chart (Series)</h4>
+      <h4 class="figure__title">Vertical Bar Chart</h4>
 <pre>{% raw %}
-{{ charts.chart_series(bar_data, 'debt', format=currency) }}
+{{ charts.chart_series(bar_data, 'debt') }}
 {% endraw %}</pre>
-      {{ charts.chart_series(bar_data, 'debt', format=currency) }}
+      {{ charts.chart_series(bar_data, 'debt') }}
     </figure>
 
     <figure class="chart-container chart--r-d">
       <h4 class="figure__title">Grouped Bar Chart</h4>
 <pre>{% raw %}
-{{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), format=currency) }}
+{{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements')) }}
 {% endraw %}</pre>
-      {{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), label_key="date", format=currency) }}
+      {{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), label_key="date") }}
     </figure>
 
     <figure class="chart-container chart--r-d">
       <h4 class="figure__title">Horizontal Bar Chart</h4>
 <pre>{% raw %}
-{{ charts.chart_series(bar_data, 'debt', orient='horizontal', format=currency) }}
+{{ charts.chart_series(bar_data, 'debt', orient='horizontal') }}
 {% endraw %}</pre>
-      {{ charts.chart_series(bar_data, 'debt', orient='horizontal', format=currency) }}
+      {{ charts.chart_series(bar_data, 'debt', orient='horizontal') }}
     </figure>
 
     <figure class="chart-container chart--r-d">
-      <h4 class="figure__title">Horizontal Bar Chart (Grouped)</h4>
+      <h4 class="figure__title">Horizontal Grouped Bar Chart</h4>
 <pre>{% raw %}
-{{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), orient='horizontal', format=currency) }}
+{{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), orient='horizontal') }}
 {% endraw %}</pre>
-      {{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), orient='horizontal', format=currency) }}
+      {{ charts.chart_series_grouped(grouped_bar_data, ('receipts', 'disbursements'), orient='horizontal') }}
     </figure>
 
     <figure class="chart-container">
