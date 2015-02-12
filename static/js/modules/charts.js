@@ -70,7 +70,6 @@ function chartSeries() {
   };
 
   function drawScale(selection, scale, dimension) {
-    console.log(scale.ticks(4));
     var axis = selection.append('div')
           .attr("class", "chart-series__axis"),
         property = dimension === 'width' ? 'right' : 'bottom',
