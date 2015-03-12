@@ -1,5 +1,5 @@
 ---
 applications:
-- name: fec-web
-  host: fec
+- name: fec-web-stage
+  host: fec-web-stage
   buildpack: python_buildpack
